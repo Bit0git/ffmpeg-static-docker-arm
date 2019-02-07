@@ -8,13 +8,13 @@ RUN set -ex; \
     cd /tmp; \
     wget https://johnvansickle.com/ffmpeg/builds/${FFMPEGSTATICBUILD}.tar.xz; \
     wget https://johnvansickle.com/ffmpeg/builds/${FFMPEGSTATICBUILD}.tar.xz.md5; \
-    md5sum -c ${FFMPEGSTATICBUILD}.tar.xz.md5; \
+    md5sum -c ${FFMPEGSTATICBUILD}.tar.xz.md5; \   
     tar xvf ${FFMPEGSTATICBUILD}.tar.xz; \
-    ln -s ./ffmpeg*armhf-static /ffmpeg; \
     rm -f ./${FFMPEGSTATICBUILD}.tar.xz; \
-    echo $PATH;
+    rm -f ./${FFMPEGSTATICBUILD}.tar.xz.md5; \
+    mv ./ffmpeg*armhf-static /ffmpeg; \
     
 WORKDIR /ffmpeg
-#ENTRYPOINT ["ffmpeg"]
-#CMD ["--help"]
+ENTRYPOINT ["ffmpeg"]
+CMD ["--help"]
 
