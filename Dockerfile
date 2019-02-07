@@ -11,9 +11,10 @@ RUN set -ex; \
     md5sum -c ${FFMPEGSTATICBUILD}.tar.xz.md5; \
     mkdir /ffmpeg; \
     tar xvf ${FFMPEGSTATICBUILD}.tar.xz -C /ffmpeg; \
-    rm -f ./${FFMPEGSTATICBUILD}.tar.xz;
+    rm -f ./${FFMPEGSTATICBUILD}.tar.xz; \
+    set;
     
 WORKDIR /ffmpeg
-ENTRYPOINT ["ffmpeg"]
+ENTRYPOINT ["./ffmpeg"]
 CMD ["--help"]
 
