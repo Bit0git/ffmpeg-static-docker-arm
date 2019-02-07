@@ -12,7 +12,7 @@ RUN set -ex; \
     mkdir /ffmpeg; \
     tar xvf ${FFMPEGSTATICBUILD}.tar.xz -C /ffmpeg; \
     rm -f ./${FFMPEGSTATICBUILD}.tar.xz; \
-    set;
+    echo $PATH;
     
 WORKDIR /ffmpeg
 ENTRYPOINT ["./ffmpeg"]
