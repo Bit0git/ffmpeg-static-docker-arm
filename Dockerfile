@@ -15,6 +15,6 @@ RUN set -ex; \
     echo $PATH;
     
 WORKDIR /ffmpeg
-ENTRYPOINT ["./ffmpeg"]
-CMD ["--help"]
+#ENTRYPOINT ["./ffmpeg"]
+#CMD ["--help"]
 
