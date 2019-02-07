@@ -15,3 +15,5 @@ RUN set -ex; \
     
 WORKDIR /ffmpeg
 ENTRYPOINT ["ffmpeg"]
+CMD ["--help"]
+
