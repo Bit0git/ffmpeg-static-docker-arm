@@ -6,12 +6,12 @@ ENV PATH=/ffmpeg:$PATH
 
 RUN set -ex; \
     cd /tmp; \
-    wget https://johnvansickle.com/ffmpeg/builds/$(FFMPEGSTATICBUILD).tar.xz; \
-    wget https://johnvansickle.com/ffmpeg/builds/$(FFMPEGSTATICBUILD).tar.xz.md5; \
-    md5sum -c $(FFMPEGSTATICBUILD).tar.xz.md5; \
+    wget https://johnvansickle.com/ffmpeg/builds/${FFMPEGSTATICBUILD}.tar.xz; \
+    wget https://johnvansickle.com/ffmpeg/builds/${FFMPEGSTATICBUILD}.tar.xz.md5; \
+    md5sum -c ${FFMPEGSTATICBUILD}.tar.xz.md5; \
     mkdir /ffmpeg; \
     tar xvf -C /ffmpeg ${FFMPEGSTATICBUILD}.tar.xz; \
-    rm -f ./$(FFMPEGSTATICBUILD).tar.xz; \
+    rm -f ./${FFMPEGSTATICBUILD}.tar.xz;
     
 WORKDIR /ffmpeg
 ENTRYPOINT ["ffmpeg"]
