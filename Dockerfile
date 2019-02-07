@@ -1,7 +1,7 @@
 FROM arm32v7/busybox:glibc  
-ENV FFMPEGSTATICBUILD=ffmpeg-git-armhf-static.tar.xz
+ENV FFMPEGSTATICBUILD=ffmpeg-git-armhf-static
 # using git build, as JVS suggests, if you want release build switch to:
-# ENV FFMPEGSTATICBUILD = ffmpeg-release-armhf-static.tar.xz
+# ENV FFMPEGSTATICBUILD = ffmpeg-release-armhf-static
 ENV PATH=/ffmpeg:$PATH
 
 RUN set -ex; \
