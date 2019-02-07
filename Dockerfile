@@ -10,7 +10,7 @@ RUN set -ex; \
     wget https://johnvansickle.com/ffmpeg/builds/${FFMPEGSTATICBUILD}.tar.xz.md5; \
     md5sum -c ${FFMPEGSTATICBUILD}.tar.xz.md5; \
     tar xvf ${FFMPEGSTATICBUILD}.tar.xz; \
-    ln -s ./ffmpeg*armhf-static /ffmpeg
+    ln -s ./ffmpeg*armhf-static /ffmpeg; \
     rm -f ./${FFMPEGSTATICBUILD}.tar.xz; \
     echo $PATH;
     
