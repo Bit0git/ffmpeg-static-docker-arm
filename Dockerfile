@@ -14,9 +14,6 @@ RUN set -ex; \
     rm -f ./${FFMPEGSTATICBUILD}.tar.xz; \
     rm -f ./${FFMPEGSTATICBUILD}.tar.xz.md5;
 
-RUN ln -sf /dev/stdout /var/log/ffmpeg.log && \
-    ln -sf /dev/stderr /var/log/ffmpeg.err
-  
 WORKDIR /ffmpeg
 ENTRYPOINT ["ffmpeg"]
 CMD ["--help"]
