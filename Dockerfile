@@ -1,4 +1,3 @@
-
 FROM arm32v7/busybox:glibc AS create 
 ARG FFMPEGSTATICBUILD=ffmpeg-git-armhf-static
 # using git build, as JVS suggests, if you want release build switch to:
