@@ -1,5 +1,5 @@
 FROM busybox:glibc AS build 
-ARG FFMPEGSTATICBUILD=ffmpeg-git-armhf-static
+ARG FFMPEGSTATICBUILD=ffmpeg-git-i686-static
 # using git build, as JVS suggests, if you want release build switch to:
 # ARG FFMPEGSTATICBUILD = ffmpeg-release-armhf-static
 ARG FFMPEGURL=https://johnvansickle.com/ffmpeg/builds/$FFMPEGSTATICBUILD.tar.xz
